@@ -1,0 +1,31 @@
+<scroll-view >
+		<image class='background' src="../../pics/background/background1.jpg" mode="aspectFill"></image>
+		<!--背景图片-->
+		<view class="container timer {{isRuning ? 'timer--runing': ''}}">
+	<view class="timer_main">	
+			 	<text wx:if="{{!completed}}" class="timer_time">{{remainTimeText}}</text>
+</view><!--倒计时-->
+<view class="button-sp-area">
+<button class="button"  plain="true" bindtap="weather">查看天气情况
+</button>
+<button class="button"  plain="true" bindtap="place">查看周围温湿度</button>
+</view><!--连接按钮-->
+  <view class="timer_footer">
+		<text bindtap="startTimer" 	class="timer_ctrl {{isRuning && timerType == 'run' ? 'hide' : ''}}" data-type="run"  >{{isRuning ? '→完成←': '→运动←'}}</text>
+	  <text bindtap="startTimer" class="timer_ctrl {{isRuning && timerType == 'study' ? 'hide' : ''}}"  data-type="study" >{{isRuning ? '→完成←': '→学习←'}}</text>
+	</view><!--开始按钮-->
+   <view class="sport" style="display:flex;flex-direction:column">
+	 <radio-group  class="choice" style="flex-group:1"bindchange="change2">
+	 <lable wx:for-items="{{sport}}"wx:for-item="item" wx:key="value">
+	 <view><radio value="{{item.value}}"checked="{{item.checked}}">{{item.value}}</radio></view></lable>
+	 </radio-group>
+	<view class="choice" style="flex-group:1">
+		<text>选择为：{{checked_value}}</text>
+		<!--选择运动方式按钮-->
+	</view>
+	</view>
+<view class="advice">{{advice}}</view>
+</view>
+</scroll-view>
+
+
