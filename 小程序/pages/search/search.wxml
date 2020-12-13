@@ -1,0 +1,32 @@
+<image class='background' src="../../pics/search.jpg" mode="aspectFill"></image><!--背景图片-->
+<view class="container">
+<view class="con" style="display:flex;flex-direction: column">
+  <view >请选择你的周围温度:</view>
+  <radio-group class="cho" style="flex-group:1" bindchange="change2">
+    <label wx:for-items="{{tem}}" wx:for-item="item" wx:key="value">
+      <view>
+        <radio value="{{item.value}}" checked="{{item.checked}}">{{item.value}}</radio>
+      </view>
+    </label>
+  </radio-group><!--温度选择器-->
+  <view   style="flex-group:1">
+    <text class="choice">您的选择为：{{checked_value}}</text>
+  </view><!--显示选择-->
+</view>
+<view class="advice">{{advice}}</view><!--显示建议-->
+<view  class="con" style="display:flex;flex-direction: column">
+  <view >请选择你的室外紫外线指数(UV):</view>
+  <radio-group  class="cho" style="flex-group:1" bindchange="change">
+    <label wx:for-items="{{uv}}" wx:for-item="item" wx:key="value">
+      <view>
+        <radio value="{{item.value}}" checked="{{item.checked}}">{{item.value}}</radio>
+      </view>
+    </label>
+  </radio-group><!--紫外线选择器-->
+  <view style="flex-group:1">
+    <text class="choice">您的选择为：{{checked_value1}}</text>
+  </view><!--显示选择-->
+</view>
+<view class="advice">{{advice1}}</view>
+</view><!--显示建议-->
+
