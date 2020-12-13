@@ -1,0 +1,34 @@
+<view class="content">
+  <scroll-view >
+    <image class='background' src="../../pics/background/background.jpg" mode="aspectFill"></image>
+    <!--背景图片-->
+
+    <!--今日天气-->
+    <view class="info">
+        <view class='cityName'>{{cityName}}</view><!--所在城市-->  
+        <view class='temp'>
+        <view class='currentTemp'>{{todayInfo.currentTemp}}</view><!--即时温度-->
+        <view class='temp_right'>
+          <view class='celsius'>{{celsius}}</view>
+        </view></view>     
+      <view class='type'>{{todayInfo.type}}</view>  <!--天气状况-->
+      <view class="humidity_view">  
+         <view>湿度：</view>
+          <view class='humidity_text'>{{humidity}}</view><!--湿度-->
+        </view>
+        <view class='wind_text'>{{todayInfo.wind}}</view><!--风况-->
+        <view class='air' >{{aqi}} {{airClass}}</view> <!--空气状况-->
+        <view class='advice'>{{advice}}</view><!--根据气温提供建议-->
+    </view>
+    <!--小时预报-->
+    <view class="scroll_box" wx:if="{{condition}}">
+      <scroll-view scroll-x="true" scroll-with-animation="true">
+        <view class="item_list" wx:key="index" wx:for="{{hoursForecast}}">
+          <view class='detail'>{{item.hour}}</view>
+          <view class='type'>{{todayInfo.type}}</view>
+          <view class='detail'>{{item.tem}}</view><!--该小时时间、天气、温度-->
+        </view>
+      </scroll-view>
+    </view>
+    </scroll-view>
+</view>

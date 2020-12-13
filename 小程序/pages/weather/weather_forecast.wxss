@@ -1,0 +1,124 @@
+/**weather.wxss**/
+.content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  color: rgb(87, 32, 32);
+  font-size: 30px;
+}
+/**背景图片**/
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+/*当日天气*/
+.cityName{
+  text-align: center;
+  padding-top: 160rpx;
+  padding-bottom: 30rpx;
+  font-size: 40px;
+}
+.advice{
+  width: 100%;
+  text-align: center;
+  padding-top: 100rpx;
+  padding-bottom: 100rpx;
+  font-size: 25px;
+}
+.temp {
+  text-align: center;
+  padding-bottom: 10rpx;
+  font-size: 25px;
+}
+.currentTemp {
+  text-align:center;
+  font-size: 120rpx; 
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size: 65px;
+}
+/*实时温度右侧部分*/
+.temp_right {
+  position: relative;
+  display: inline-block;
+  padding-left: 10rpx;
+  vertical-align: top;
+  text-align: left;
+}
+/*摄氏度符号*/
+.celsius {
+  font-size: 40rpx;
+  padding-top: 10rpx;
+  color: #fff;
+}
+/*天气类型*/
+.type { 
+  justify-content: center;
+  font-weight: bold;
+  margin-top: 10rpx;
+  text-align: center;
+  font-size: 25px;
+}
+/*温度范围和湿度*/
+.humidity_view {
+  width: 100%;
+  height: 90rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 25px;
+}
+/*湿度文字*/
+.humidity_text {
+  margin-left: 15rpx;
+  margin-right: 5rpx;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+/*风向风速文字*/
+.wind_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 30rpx;
+  font-size: 25px;
+}
+/*空气质量*/
+.air {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 30rpx;
+  font-size: 25px;
+  margin-top: 15rpx;
+}
+/*小时预报*/
+.scroll_box {
+  
+  height: 180rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/*小时预报*/
+.item_list {
+  width: 110rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
