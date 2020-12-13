@@ -1,0 +1,12 @@
+<canvas class = "canvas" id="chart3"
+canvas-id="tempe"></canvas>
+<canvas class = "canvas" id="chart1"
+canvas-id="humidity"></canvas>
+<view class="hhhq">
+  <view>温度：</view>
+  <view>{{temp}}（摄氏度℃）</view>
+  <view>湿度：</view>
+  <view>{{humid}}（%）</view></view>
+  <button bindtap="get11" class="btn1">查询实时温湿度</button>
+
+
