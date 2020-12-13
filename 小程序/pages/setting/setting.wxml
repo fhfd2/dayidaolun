@@ -1,0 +1,36 @@
+	<scroll-view >
+		<image class='background' src="../../pics/background/background1.jpg" mode="aspectFill"></image>
+		<!--背景图片-->
+		<view class="container">
+		<view class="section panel"><!--提供容器-->
+	  <text class="section_title">运动时长(分钟)</text>
+	  <view class="section_body" >
+	    <slider 
+	    	bindchange="changeRunTime" 
+	    	show-value="true" 
+	    	min="1"
+	    	max="60"
+				block-size="12"
+	    	value="{{runTime}}"
+				/><!--滑动进度条-->
+	  </view>
+	</view>
+	<view class="section panel">
+	  <text class="section_title">学习时长(分钟)</text><!--进度条提示-->
+	  <view class="section_body">
+	    <slider 
+	    	bindchange="changeStudyTime"   show-value="true" 	  min="5"
+				block-size="12"
+	    	max="120"
+	    	value="{{studyTime}}"
+	    /><!--进度条-->
+	  </view>
+	</view>
+	<view class="section panel">
+	  <view class="section_title">
+	  	<switch class="section_check" type="checkbox" size="mini" checked bindchange="switch1Change"/>
+	  	<text>启用铃声</text><!--是否启用铃声-->
+	  </view>	
+	</view>
+</view>
+	</scroll-view>
