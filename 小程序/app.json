@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/weather_forecast/weather_forecast",
+    "pages/setting/setting",
+    "pages/search/search",
+    "pages/place/place"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取当地天气信息"
+    }
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "backgroundColor": "#FAF0E6",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/clock.jpg",
+        "text": "倒计时"
+    
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "pics/wenhao.jpg",
+        "text": "查询"
+  
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "iconPath": "image/setting.jpg",
+        "text": "设置时长"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#BBFFFF",
+    "navigationBarTitleText": "运动助手",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "debug": false
+}
